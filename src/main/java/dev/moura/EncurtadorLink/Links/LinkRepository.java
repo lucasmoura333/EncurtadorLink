@@ -12,6 +12,8 @@ public interface LinkRepository extends JpaRepository <Link, Long>{
     //Link findByurlLong(String urlEncurtada);
     //Link findByUrlOriginal(@Param("UrlLong") String urlEncurtada);
 
+    //Teve que ser feito essa adaptação abaixo por que JPA tava biruleibe das ideia
+
     @Query("SELECT l FROM Link l WHERE l.urlEncurtada = :urlEncurtada")
     Link findByUrlEncurtada(@Param("urlEncurtada") String urlEncurtada);
 

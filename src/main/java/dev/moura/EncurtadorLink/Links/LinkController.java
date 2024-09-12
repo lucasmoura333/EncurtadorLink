@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.Map;
 
 @RestController
@@ -44,7 +43,7 @@ public class LinkController {
 
         Link link = linkService.obterUrlOriginal(urlEncurtada);
 
-        if (link != null //&& link.getUrlLong() != null && !link.getUrlLong().isEmpty()
+        if (link != null && link.getUrlLong() != null && !link.getUrlLong().isEmpty()
         ) {
             response.sendRedirect(link.getUrlLong());
         } else {

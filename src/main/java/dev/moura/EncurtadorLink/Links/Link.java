@@ -29,6 +29,10 @@ public class Link {
         this.id = id;
      }
 
+    public Link() {
+
+    }
+
     public Long getId() {
         return id;
     }
